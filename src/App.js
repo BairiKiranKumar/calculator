@@ -27,15 +27,15 @@ function App() {
   };
  
   function resetInput(e) { 
+    e.preventDefault();
     if (inputRef.current) {
       inputRef.current.value = '';
     }
   }; 
  
   function resetResult(e) { 
-    if (resultRef.current) {
-      resultRef.current.value = '';
-    }
+    e.preventDefault();
+    setResult(0);
   }; 
  
   return ( 
